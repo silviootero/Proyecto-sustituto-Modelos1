@@ -1,6 +1,7 @@
 **DESARROLLO DEL NOTEBOOK PASO A PASO**
 
 La competencia tomada para la realización de este proyecto es Seoul Bike Rental Prediction - AI-Pro - ITI https://www.kaggle.com/competitions/seoul-bike-rental-ai-pro-iti/overview
+
 Se desarrolla en un notebook en el que se va abordando paso a paso de la siguiente manera:
 
 • **Importación de librerías:** Se importan bibliotecas clave como numpy, pandas, matplotlib, seaborn y herramientas de scikit-learn para la manipulación de datos, visualización y modelado. Además, se importa stats de scipy para análisis estadístico y PCA para reducción de dimensionalidad.
