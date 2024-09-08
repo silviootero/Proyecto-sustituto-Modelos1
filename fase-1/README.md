@@ -15,13 +15,13 @@ Se desarrolla en un notebook en el que se va abordando paso a paso de la siguien
 
 • **Procesamiento de características:**
 
-    • Se codifican las características categóricas como Seasons, Functioning Day, y Holiday.
+ • Se codifican las características categóricas como Seasons, Functioning Day, y Holiday.
     
-    •	Se aplica PCA para reducir las dimensiones de las características de temperatura.
+ •	Se aplica PCA para reducir las dimensiones de las características de temperatura.
     
-    •	Se agrega la función para filtrar los días de funcionamiento.
+ •	Se agrega la función para filtrar los días de funcionamiento.
     
-    •	Se reemplazan los valores atípicos en los datos numéricos utilizando el método IQR para eliminar valores extremos.
+ •	Se reemplazan los valores atípicos en los datos numéricos utilizando el método IQR para eliminar valores extremos.
 
     
     
@@ -30,9 +30,9 @@ Se desarrolla en un notebook en el que se va abordando paso a paso de la siguien
 
 • **Modelado:**
 
-    •	Se utiliza el modelo XGBRegressor de XGBoost para la predicción, ajustando varios hiperparámetros como tweedie_variance_power, max_depth, y learning_rate. El conjunto de entrenamiento se ajusta y el modelo se entrena con una división train_test_split para evaluar su rendimiento.
+ •	Se utiliza el modelo XGBRegressor de XGBoost para la predicción, ajustando varios hiperparámetros como tweedie_variance_power, max_depth, y learning_rate. El conjunto de entrenamiento se ajusta y el modelo se entrena con una división train_test_split para evaluar su rendimiento.
     
-    •	Se calcula el error con mean_squared_log_error y se evalúa la precisión del modelo.
+ •	Se calcula el error con mean_squared_log_error y se evalúa la precisión del modelo.
 
     
 • **Visualización:** Se generan gráficos como histogramas y diagramas de dispersión para visualizar la distribución de los valores de predicción y los errores entre los valores reales y predichos.
