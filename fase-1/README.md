@@ -12,17 +12,28 @@ Se desarrolla en un notebook en el que se va abordando paso a paso de la siguien
 
 • **Limpieza de datos:** Se renombraron algunas columnas como "Temperature (C)" y "Dew point temperature (C)" para mayor claridad. Además, se crea una función para agregar una columna indicando si las horas son laborales (entre las 5 y las 20 horas). También, se separa la columna de fecha en mes, día y día de la semana.
 
+
 • **Procesamiento de características:**
+
     • Se codifican las características categóricas como Seasons, Functioning Day, y Holiday.
+    
     •	Se aplica PCA para reducir las dimensiones de las características de temperatura.
+    
     •	Se agrega la función para filtrar los días de funcionamiento.
+    
     •	Se reemplazan los valores atípicos en los datos numéricos utilizando el método IQR para eliminar valores extremos.
+
+    
     
 • **Preprocesamiento:** Se eliminan columnas no relevantes como la fecha, Snowfall (cm), Holiday y Wind speed (m/s). Luego, se normalizan las características numéricas para estandarizar los datos de entrenamiento y prueba.
 
+
 • **Modelado:**
+
     •	Se utiliza el modelo XGBRegressor de XGBoost para la predicción, ajustando varios hiperparámetros como tweedie_variance_power, max_depth, y learning_rate. El conjunto de entrenamiento se ajusta y el modelo se entrena con una división train_test_split para evaluar su rendimiento.
+    
     •	Se calcula el error con mean_squared_log_error y se evalúa la precisión del modelo.
+
     
 • **Visualización:** Se generan gráficos como histogramas y diagramas de dispersión para visualizar la distribución de los valores de predicción y los errores entre los valores reales y predichos.
 
