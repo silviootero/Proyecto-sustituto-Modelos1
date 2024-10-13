@@ -10,9 +10,6 @@ COPY requirements.txt requirements.txt
 # Instala las dependencias desde requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Instala wget
-RUN apt-get update && apt-get install -y wget
-
 # Copia todo el contenido de la carpeta actual (fase-2) al directorio de trabajo en el contenedor
 COPY . .
 
