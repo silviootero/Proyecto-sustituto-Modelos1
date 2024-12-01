@@ -1,0 +1,17 @@
+# Utiliza una imagen base oficial de Python
+FROM python:3.10-slim
+
+# Establece el directorio de trabajo dentro del contenedor
+WORKDIR /app
+
+# Copia el archivo de requerimientos si existe (asegúrate de tener un requirements.txt)
+COPY requirements.txt requirements.txt
+
+# Instala las dependencias desde requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copia todo el contenido de la carpeta actual (fase-2) al directorio de trabajo en el contenedor
+COPY . .
+
+# Ejecuta el script que correrá train.py y predict.py
+CMD ["python", "run_scripts.py"]
