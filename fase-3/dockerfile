@@ -13,5 +13,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copia todo el contenido de la carpeta actual (fase-2) al directorio de trabajo en el contenedor
 COPY . .
 
-# Ejecuta el script que correrá train.py y predict.py
-CMD ["python", "run_scripts.py"]
+# Ejecuta los scripts de entrenamiento y predicción
+RUN python scripts/train.py
+RUN python scripts/predict.py
+
+# Exponer el puerto para la API REST
+EXPOSE 5000
+
+# Comando por defecto para iniciar la API
+CMD ["flask", "apirest:app", "--host", "0.0.0.0", "--port", "5000"]
